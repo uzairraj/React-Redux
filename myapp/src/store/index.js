@@ -7,6 +7,12 @@ const counterReducer = (state = { counter: 0 }, action) => {
       counter: state.counter + 1,
     };
   }
+  //using payload actions
+  if (action.type === 'incrementby5') {
+    return {
+      counter: state.counter + action.amount,
+    };
+  }
 
   if (action.type === 'decrement') {
     return {
